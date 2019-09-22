@@ -1,0 +1,40 @@
+		                                          
+						  find n'th Highest salary
+Given Table:
+mysql> select *from emp;
+Ans:
++------+---------+
+| id   | salary  |
++------+---------+
+|    1 |  269.12 |
+|    2 | 2697.12 |
+|    3 |    97.1 |
+|    4 |  197.12 |
+|    5 | 1972.12 |
+|    6 | 3972.12 |
++------+---------+
+
+1.QUERY FOR 4TH HIGHEST SALARY
+
+QUERY:select salary from emp order by salary asc limit 3,1;
+O/P:
++---------+
+| salary  |
++---------+
+| 1972.12 |
++---------+
+
+2.QUERY FOR 5TH HIGHEST SALARY
+
+mysql> select salary from emp order by salary asc limit 4,1;
++---------+
+| salary  |
++---------+
+| 2697.12 |
++---------+
+
+According to above Results we can conclude  that for 
+for finding nth highest salary we can write query as:
+Syntax:
+
+select column_name from table_name order by expression asc limit n-1,1; 
